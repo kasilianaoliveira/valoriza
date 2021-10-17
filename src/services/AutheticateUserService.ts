@@ -14,13 +14,13 @@ class AuthenticateUserService {
     const user = await usersReposiories.findOne({email});
 
     if(!user){
-      throw new Error("Email/Password incorrect");
+      throw new Error("Email or Password incorrect");
     }
 
     const passwordMatch = await compare(password, user.password);
 
     if(!passwordMatch){
-      throw new Error("Email/Password incorrect");
+      throw new Error("Email or Password incorrect");
     }
 
     const token = sign(
