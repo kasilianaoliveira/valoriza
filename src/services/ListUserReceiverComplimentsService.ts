@@ -1,0 +1,5 @@
+
+
+class ListUserReceiverCompliments {}
+
+export { ListUserReceiverCompliments }
